@@ -21,7 +21,7 @@ public class AccountPage extends BasePage {
     private WebElementFacade logoutButton;
     @FindBy(css=" tbody tr:nth-child(1) td.woocommerce-orders-table__cell.woocommerce-orders-table__cell-order-actions a")
     private WebElementFacade ViewOrder;
-    @FindBy(css=" #post-7 > div > div > h2")
+    @FindBy(css="#post-7 > div > div > div > div > div > section.woocommerce-order-details > h2")
     private WebElementFacade ViewOrderMessage;
 
     public String getWelcomeText() {

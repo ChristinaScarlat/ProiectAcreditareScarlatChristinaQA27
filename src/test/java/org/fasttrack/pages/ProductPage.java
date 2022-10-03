@@ -52,6 +52,10 @@ public class ProductPage extends BasePage {
         setQtyFieldProducts.clear();
         setQtyFieldProducts.sendKeys(Qty + "");
     }
+    public void getSQtyFieldProducts(String Qty) {
+        setQtyFieldProducts.clear();
+        setQtyFieldProducts.sendKeys(Qty + "");
+    }
     public void clickQtyLogoProductTShirt(int Qty){
         logoProductTShirt.clear();
         logoProductTShirt.sendKeys(Qty + "");

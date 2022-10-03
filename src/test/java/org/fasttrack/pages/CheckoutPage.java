@@ -49,8 +49,9 @@ public class CheckoutPage extends BasePage{
     private WebElementFacade billingEmailField;
     @FindBy(id="place_order")
     private WebElementFacade PlaceOrder;
-    @FindBy(css="#post-6 .entry-content .content-inner.clearfix .post-title")//.woocommerce-order p 2//.woocommerce-order p.woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-received
+    @FindBy(css = "#post-6 > div > div > h2")
     private WebElementFacade orderMessage;
+
     @FindBy(css = ".select2-results__options li")
     private List<WebElementFacade> listOfCountys;
 

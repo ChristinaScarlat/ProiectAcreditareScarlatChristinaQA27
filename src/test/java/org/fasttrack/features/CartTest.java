@@ -13,9 +13,12 @@ public class CartTest extends BaseTest{
         cartSteps.checkSuccessMessageSpan("Cap");
     }
     @Test
-    public void addProductToCart(){
-        cartSteps.addAlbumWOOToCart();
-        cartSteps.checkSuccessMessageSpan("Album");
+    public void addABigNumberOfProductsToCart(){
+        searchSteps.searchForKeyword("Hat");
+        productSteps.addProductsQty(1000000);
+        cartSteps.addProductToCart();
+        cartSteps.checkSuccessMessageSpanQty("White Hat");
+
     }
     @Test
     public void loginAndRemoveProductFromCart(){
@@ -33,6 +36,8 @@ public class CartTest extends BaseTest{
     }
     @Test
     public void addQtyCartProductAndUpdate(){
+        searchSteps.searchForKeyword("Album");
+        cartSteps.addProductToCart();
         loginSteps.doLogin(Constants.USER_EMAIl,Constants.USER_PASS);
         cartSteps.viewCart();
         productSteps.addProductsQty(3);

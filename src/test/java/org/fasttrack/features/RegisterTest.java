@@ -19,7 +19,7 @@ public class RegisterTest extends BaseTest{
         loginSteps.navigateToHomepage();
         loginSteps.navigateToLoginPage();
         registerSteps.setRegEmailAddress("");
-        registerSteps.setPassword("Parola12345!!!");
+        registerSteps.setPassword("Parola12345!!");
         registerSteps.clickRegister();
         registerSteps.verifyErrorMessageForRegisterWithNoMail();
     }

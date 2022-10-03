@@ -94,7 +94,14 @@ public class CheckoutSteps extends BaseSteps{
     @Step
     public void clickPlaceOrder(){
         checkoutPage.setPlaceOrder();
+        waitABit(5000);
     }
+    @Step
+    public void getOrderMessage() {
+    checkoutPage.setOrderMessage();
+    }
+
+
 
     @Step
     public void setBillingDetailsAndPlaceOrder(String bfirstname, String blastname,String bAddress1, String bCounty, String bCity,  String bPostcode,String bPhone, String bEmail){

@@ -12,11 +12,6 @@ public class SearchTest extends BaseTest {
     }
 
     @Test
-    public void loginAndSearchForSecondProductNameTest(){
-        loginSteps.doLogin(Constants.USER_EMAIl,Constants.USER_PASS);
-        searchSteps.searchForKeyword("shirt");
-    }
-    @Test
     public void loginAndSearchForProductLogoAndAddToCart(){
         loginSteps.doLogin(Constants.USER_EMAIl,Constants.USER_PASS);
         searchSteps.searchForKeyword("logo");
@@ -28,6 +23,12 @@ public class SearchTest extends BaseTest {
     public void searchForProductSetQtyAndAddToCart(){
         searchSteps.searchForKeyword("belt");
         productSteps.addProductsQty(2);
+        cartSteps.addProductToCart();
+    }
+    @Test
+    public void searchForProductSetInvalidQtyAndAddToCart(){
+        searchSteps.searchForKeyword("belt");
+        productSteps.addProductSQty("a");
         cartSteps.addProductToCart();
     }
     @Test

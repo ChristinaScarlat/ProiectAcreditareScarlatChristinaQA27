@@ -13,6 +13,10 @@ public class ProductSteps extends BaseSteps{
         productPage.getQtyFieldProducts(Qty);
     }
     @Step
+    public void addProductSQty(String Qty){
+        productPage.getSQtyFieldProducts(Qty);
+    }
+    @Step
     public void clickQtyOnLogoProductTShirt(int Qty){
         productPage.clickQtyLogoProductTShirt(Qty);
     }

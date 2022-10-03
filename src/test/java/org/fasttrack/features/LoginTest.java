@@ -46,6 +46,13 @@ public class LoginTest extends BaseTest {
     @Test
     public void loginCheckOrderAndLogout(){
         loginSteps.doLogin(Constants.USER_EMAIl,Constants.USER_PASS);
+        searchSteps.searchForKeyword("belt");
+        productSteps.addProductsQty(2);
+        cartSteps.addProductToCart();
+        cartSteps.viewCart();
+        cartSteps.proceedToCheckOut();
+        checkoutSteps.clickPlaceOrder();
+        accountSteps.clickMyAccountMenuButton();
         accountSteps.clickOrdersButton();
         accountSteps.clickViewOrderButton();
         accountSteps.getViewOrderMessage();

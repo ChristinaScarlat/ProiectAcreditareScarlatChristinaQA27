@@ -33,7 +33,11 @@ public class AccountSteps extends BaseSteps{
         accountPage.clickViewOrder();
     }
     @Step
+    public void clickMyAccountMenuButton(){
+        homePage.clickMyAccountMenuButton();
+    }
+    @Step
     public void getViewOrderMessage(){
-        Assert.assertEquals("ORDER #1114", accountPage.getOrderMessage());
+        Assert.assertEquals("Order details", accountPage.getOrderMessage());
     }
 }

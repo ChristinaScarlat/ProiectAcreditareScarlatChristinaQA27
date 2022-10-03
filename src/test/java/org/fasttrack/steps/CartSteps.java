@@ -40,6 +40,12 @@ public class CartSteps extends BaseSteps {
         Assert.assertEquals(expected, actual);
     }
     @Step
+    public void checkSuccessMessageSpanQty(String productName) {
+        String expected = "1000000 × “" + productName + "” have been added to your cart.";
+        String actual = cartPage.getSuccessMessageSpan();
+        Assert.assertEquals(expected, actual);
+    }
+    @Step
     public void proceedToCheckOut() {
         cartPage.clickProceedToCheckOutButton();
     }
